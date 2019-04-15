@@ -1,11 +1,11 @@
 /**/
 
 @font-face {
-  font-family: 'Lobster';
+  font-family: 'Shojumaru';
   font-style: normal;
   font-weight: 400;
-  src: local('Lobster Regular'), local('Lobster-Regular'), url(https://fonts.gstatic.com/s/lobster/v21/neILzCirqoswsqX9zoamM5Ez.woff2) format('woff2');
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+  src: local('Shojumaru'), local('Shojumaru-Regular'), url(https://fonts.gstatic.com/s/shojumaru/v6/rax_HiWfutkLLnaKCtl8Axhf.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
@@ -54,6 +54,16 @@
   
   border: none;
   outline: none;
+}
+
+html.turbolinks-progress-bar:before,.turbolinks.turbolinks-progress-bar {
+  z-index: 9999 !important;
+  
+  height: 3px;
+  
+  background: #5aa0b9 !important;
+  -webkit-box-shadow: 0 0 15px #5aa0b9 !important;
+  box-shadow: 0 0 15px #5aa0b9 !important;
 }
 
 body {
@@ -109,10 +119,10 @@ body {
 }
 
 .l-top_menu .inner .logo:after {
-  content: "Шикимори";
+  content: "S";
   
-  font-family: 'Lobster';
-  font-size: 35px;
+  font-family: 'Shojumaru';
+  font-size: 36px;
   line-height: 1;
   color: #fff;
   
@@ -307,7 +317,7 @@ body {
 
 .b-main_search .input {
   display: flex;
-  width: 180px;
+  width: 218px;
   height: 34px;
   margin: 0;
   padding: 0;
@@ -322,7 +332,7 @@ body {
   display: flex;
   align-items: center;
   flex-grow: 1;
-  width: 180px;
+  width: 218px;
   height: 34px;
   padding: 0 15px;
 
@@ -402,7 +412,7 @@ body {
 }
 
 .b-main_search ul.popup li {
-  width: 180px;
+  width: 218px;
   height: auto;
   padding: 10px;
 
@@ -455,11 +465,11 @@ body {
 }
 
 .menu .avatar:hover {
-  box-shadow: 0 0 25px #5DA1BB90;
+  box-shadow: 0 0 25px #5aa0b990;
 }
 
 .menu .avatar:active {
-  box-shadow: 0 0 15px #5DA1BB90;
+  box-shadow: 0 0 15px #5aa0b990;
 }
 
 @media only screen and (min-width: 1025px) {
@@ -571,6 +581,82 @@ body {
     float: none;
     order: 4;
   }
+}
+
+/**/
+
+
+
+/**/
+
+.ac_results.menu-suggest {
+  top: 65px !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: translateX(-50%);
+}
+
+.x1200 .ac_results.menu-suggest {
+  left: calc(50% + 460px) !important;
+}
+
+.x1000 .ac_results.menu-suggest {
+  left: calc(50% + 360px) !important;
+}
+
+.ac_results.menu-suggest,
+.completable-block.menu-suggest
+{
+  width: 280px !important;
+  
+  border: none;
+  box-shadow: 0 0 30px #00000050; 
+}
+
+.ac_results {
+  z-index: 99999;
+  
+  width: 280px !important;
+  padding: 0px;
+  overflow: hidden;
+  
+  border: none;
+  background: #fff;
+}
+
+.ac_results li {
+  position: relative;
+  
+  display: block;
+  margin: 0px;
+  padding: 10px;
+  overflow: hidden;
+  
+  font-size: 12px;
+  line-height: 1;
+  color: #191928;
+  
+  border: none;
+  
+  cursor: pointer;
+}
+
+.ac_results li.ac_even {
+  background: none;
+}
+
+.ac_results li.ac_odd {
+  background: #e4e4e4;
+}
+
+.ac_results li:hover {
+  color: #fff;
+  
+  background: #aaafdc;
+}
+
+.ac_results li:active {
+  color: #ffffff90;
 }
 
 /**/
